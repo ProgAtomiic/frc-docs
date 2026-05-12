@@ -133,7 +133,7 @@ export default function Home(): ReactNode {
         </Link>
 
         <Link
-          to="/docs/Subtopics/CodeDeveloping"
+          to="/docs/Code developing/_category_"
           style={{
             background: '#423f43',
             padding: '2rem',
