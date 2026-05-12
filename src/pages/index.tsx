@@ -63,6 +63,28 @@ export default function Home(): ReactNode {
           </p>
         </Link>
 
+        <Link
+          to="/Subtopics/CodeStandarts"
+          style={{
+            background: '#423f43',
+            padding: '2rem',
+            borderRadius: '20px',
+            width: '400px',
+            textDecoration: 'none',
+            color: 'white',
+            textAlign: 'center',
+            transition: '0.3s',
+          }}
+
+        >
+          <h1 style={{ fontSize: '3rem' }}>📏</h1>
+
+          <h2>Code standards</h2>
+
+          <p>
+            Following best practices for writing maintainable and efficient code.
+          </p>
+        </Link>
 
         <Link
           to="/Subtopics/CodeStructure"
@@ -84,29 +106,6 @@ export default function Home(): ReactNode {
 
           <p>
             Looking for how we structure our code and how to master it.
-          </p>
-        </Link>
-
-        <Link
-          to="/Subtopics/CodeDeveloping"
-          style={{
-            background: '#423f43',
-            padding: '2rem',
-            borderRadius: '20px',
-            width: '400px',
-            textDecoration: 'none',
-            color: 'white',
-            textAlign: 'center',
-            transition: '0.3s',
-          }}
-
-        >
-          <h1 style={{ fontSize: '3rem' }}>💻</h1>
-
-          <h2>Code developing</h2>
-
-          <p>
-            Creating and implementing new code concepts.
           </p>
         </Link>
 
@@ -134,6 +133,29 @@ export default function Home(): ReactNode {
         </Link>
 
         <Link
+          to="/Subtopics/CodeDeveloping"
+          style={{
+            background: '#423f43',
+            padding: '2rem',
+            borderRadius: '20px',
+            width: '400px',
+            textDecoration: 'none',
+            color: 'white',
+            textAlign: 'center',
+            transition: '0.3s',
+          }}
+
+        >
+          <h1 style={{ fontSize: '3rem' }}>💻</h1>
+
+          <h2>Code developing</h2>
+
+          <p>
+            Creating and implementing new code concepts.
+          </p>
+        </Link>
+
+        <Link
           to="/Subtopics/TestingANDImproving"
           style={{
             background: '#423f43',
@@ -155,30 +177,6 @@ export default function Home(): ReactNode {
             Performing good tests and interpreting the results to get better.
           </p>
         </Link>
-
-        <Link
-          to="/Subtopics/CodeStandarts"
-          style={{
-            background: '#423f43',
-            padding: '2rem',
-            borderRadius: '20px',
-            width: '400px',
-            textDecoration: 'none',
-            color: 'white',
-            textAlign: 'center',
-            transition: '0.3s',
-          }}
-
-        >
-          <h1 style={{ fontSize: '3rem' }}>📏</h1>
-
-          <h2>Code standards</h2>
-
-          <p>
-            Following best practices for writing maintainable and efficient code.
-          </p>
-        </Link>
-
 
       </main>
     </Layout>
