@@ -41,7 +41,7 @@ export default function Home(): ReactNode {
       }}
       >
         <Link
-          to="/Subtopics/Introduction"
+          to="/docs/Subtopics/Introduction"
           style={{
             background: '#423f43',
             padding: '2rem',
@@ -64,7 +64,7 @@ export default function Home(): ReactNode {
         </Link>
 
         <Link
-          to="/Subtopics/CodeStandarts"
+          to="/docs/Subtopics/CodeStandarts"
           style={{
             background: '#423f43',
             padding: '2rem',
@@ -87,7 +87,7 @@ export default function Home(): ReactNode {
         </Link>
 
         <Link
-          to="/Subtopics/CodeStructure"
+          to="/docs/Subtopics/CodeStructure"
           style={{
             background: '#423f43',
             padding: '2rem',
@@ -110,7 +110,7 @@ export default function Home(): ReactNode {
         </Link>
 
         <Link
-          to="/Subtopics/ControlTechniques"
+          to="/docs/Subtopics/ControlTechniques"
           style={{
             background: '#423f43',
             padding: '2rem',
@@ -133,7 +133,7 @@ export default function Home(): ReactNode {
         </Link>
 
         <Link
-          to="/Subtopics/CodeDeveloping"
+          to="/docs/Subtopics/CodeDeveloping"
           style={{
             background: '#423f43',
             padding: '2rem',
@@ -156,7 +156,7 @@ export default function Home(): ReactNode {
         </Link>
 
         <Link
-          to="/Subtopics/TestingANDImproving"
+          to="/docs/Subtopics/TestingANDImproving"
           style={{
             background: '#423f43',
             padding: '2rem',
