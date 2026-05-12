@@ -98,7 +98,7 @@ const config: Config = {
           title: 'Community',
           items: [
             {
-              label: 'site',
+              label: 'Site',
               href: 'https://atomiic.com.br/',
             },
             {
@@ -108,7 +108,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Atomiic Docs, Inc. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,
