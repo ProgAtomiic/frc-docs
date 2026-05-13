@@ -40,8 +40,11 @@ export default function Home(): ReactNode {
         minHeight: '50vh'
       }}
       >
+
+        {/* ////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
+
         <Link
-          to="/docs/Subtopics/Introduction"
+          to="/docs/Introduction/"
           style={{
             background: '#423f43',
             padding: '2rem',
@@ -63,8 +66,10 @@ export default function Home(): ReactNode {
           </p>
         </Link>
 
+        {/* ////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
+
         <Link
-          to="/docs/Subtopics/CodeStandarts"
+          to="/docs/CodeStandarts/"
           style={{
             background: '#423f43',
             padding: '2rem',
@@ -86,8 +91,10 @@ export default function Home(): ReactNode {
           </p>
         </Link>
 
+        {/* ////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
+
         <Link
-          to="/docs/Subtopics/CodeStructure"
+          to="/docs/CodeStructure"
           style={{
             background: '#423f43',
             padding: '2rem',
@@ -109,8 +116,10 @@ export default function Home(): ReactNode {
           </p>
         </Link>
 
+        {/* ////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
+
         <Link
-          to="/docs/Subtopics/ControlTechniques"
+          to="/docs/ControlTechniques"
           style={{
             background: '#423f43',
             padding: '2rem',
@@ -132,8 +141,10 @@ export default function Home(): ReactNode {
           </p>
         </Link>
 
+        {/* ////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
+
         <Link
-          to="/docs/Code developing/_category_"
+          to="/docs/CodeDeveloping"
           style={{
             background: '#423f43',
             padding: '2rem',
@@ -155,8 +166,10 @@ export default function Home(): ReactNode {
           </p>
         </Link>
 
+        {/* ////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
+
         <Link
-          to="/docs/Subtopics/TestingANDImproving"
+          to="/docs/TestingANDImproving"
           style={{
             background: '#423f43',
             padding: '2rem',
