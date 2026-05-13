@@ -41,9 +41,14 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
+          // Please change this to your repo.
+          // Remove this to remove the "edit this page" links.
+          editUrl:
+            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
           sidebarCollapsible: true,
-          sidebarCollapsed: false,
+          sidebarCollapsed: true,
        
+          HOME-PAGE
         },
         blog: {
           showReadingTime: true,
