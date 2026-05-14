@@ -44,10 +44,10 @@ export default function Home(): ReactNode {
         {/* ////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
 
         <Link
-          to="/docs/Introduction/"
+          to="/docs/Example/"
           style={{
             background: '#423f43',
-            padding: '2rem',
+            padding: '4rem',
             borderRadius: '20px',
             width: '400px',
             textDecoration: 'none',
@@ -57,139 +57,16 @@ export default function Home(): ReactNode {
           }}
 
         >
-          <h1 style={{ fontSize: '3rem' }}>📘</h1>
+          <h1 style={{ fontSize: '3rem' }}>      📘</h1>
 
-          <h2>Introduction</h2>
+          <h2>Example</h2>
 
           <p>
-            Understanding the basics of FRC java project development.
+            This is an example page.
           </p>
         </Link>
 
         {/* ////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
-
-        <Link
-          to="/docs/CodeStandarts/"
-          style={{
-            background: '#423f43',
-            padding: '2rem',
-            borderRadius: '20px',
-            width: '400px',
-            textDecoration: 'none',
-            color: 'white',
-            textAlign: 'center',
-            transition: '0.3s',
-          }}
-
-        >
-          <h1 style={{ fontSize: '3rem' }}>📏</h1>
-
-          <h2>Code standards</h2>
-
-          <p>
-            Following best practices for writing maintainable and efficient code.
-          </p>
-        </Link>
-
-        {/* ////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
-
-        <Link
-          to="/docs/CodeStructure"
-          style={{
-            background: '#423f43',
-            padding: '2rem',
-            borderRadius: '20px',
-            width: '400px',
-            textDecoration: 'none',
-            color: 'white',
-            textAlign: 'center',
-            transition: '0.3s',
-          }}
-
-        >
-          <h1 style={{ fontSize: '3rem' }}>🏗️</h1>
-
-          <h2>Code structure</h2>
-
-          <p>
-            Looking for how we structure our code and how to master it.
-          </p>
-        </Link>
-
-        {/* ////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
-
-        <Link
-          to="/docs/ControlTechniques"
-          style={{
-            background: '#423f43',
-            padding: '2rem',
-            borderRadius: '20px',
-            width: '400px',
-            textDecoration: 'none',
-            color: 'white',
-            textAlign: 'center',
-            transition: '0.3s',
-          }}
-
-        >
-          <h1 style={{ fontSize: '3rem' }}>🎮</h1>
-
-          <h2>Control techniques</h2>
-
-          <p>
-            Making your robot interacts as it should with the real world.
-          </p>
-        </Link>
-
-        {/* ////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
-
-        <Link
-          to="/docs/CodeDeveloping"
-          style={{
-            background: '#423f43',
-            padding: '2rem',
-            borderRadius: '20px',
-            width: '400px',
-            textDecoration: 'none',
-            color: 'white',
-            textAlign: 'center',
-            transition: '0.3s',
-          }}
-
-        >
-          <h1 style={{ fontSize: '3rem' }}>💻</h1>
-
-          <h2>Code developing</h2>
-
-          <p>
-            Creating and implementing new code concepts.
-          </p>
-        </Link>
-
-        {/* ////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
-
-        <Link
-          to="/docs/TestingANDImproving"
-          style={{
-            background: '#423f43',
-            padding: '2rem',
-            borderRadius: '20px',
-            width: '400px',
-            textDecoration: 'none',
-            color: 'white',
-            textAlign: 'center',
-            transition: '0.3s',
-          }}
-
-        >
-          <h1 style={{ fontSize: '3rem' }}>🧪</h1>
-
-          <h2>Testing and improving</h2>
-
-          <p>
-            Performing good tests and interpreting the results to get better.
-          </p>
-        </Link>
 
       </main>
     </Layout>

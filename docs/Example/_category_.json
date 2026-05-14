@@ -1,0 +1,10 @@
+{
+  "label": "Example",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "slug": "/Example",
+
+    "description": "A example of topic and subtopics, this is just to show how the documentation works and how to create new topics and subtopics, this page will be deleted in the future, but for now, you can use it as a reference to create new topics and subtopics. "
+  }
+}
