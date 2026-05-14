@@ -9,27 +9,20 @@ const config: Config = {
   tagline: 'Java is UnderControl!',
   favicon: 'img/favicon.ico',
 
-  // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
-    v4: true, // Improve compatibility with the upcoming Docusaurus v4
+    v4: true, 
   },
 
-  // Set the production url of your site here
-  url: 'https://atomiic9110docs.com',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
-
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'Hebert2008', // Usually your GitHub org/user name.
-  projectName: '#9110 Docs', // Usually your repo name.
+  url: 'https://ProgAtomiic.github.io', // Troque pelo seu link do GitHub Pages
+  baseUrl: '/frc-docs/', // O nome exato do seu repositório no GitHub
+  organizationName: 'ProgAtomiic', // Seu usuário do GitHub
+  projectName: 'frc-docs', // O nome do repositório
+  deploymentBranch: 'gh-pages',
+  trailingSlash: false,
 
   onBrokenLinks: 'throw',
 
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
+
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
@@ -41,8 +34,7 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
+
           editUrl:
             'https://github.com/ProgAtomiic/frc-docs/tree/main/',
           sidebarCollapsible: true,
@@ -55,11 +47,8 @@ const config: Config = {
             type: ['rss', 'atom'],
             xslt: true,
           },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
           editUrl:
             'https://github.com/ProgAtomiic/frc-docs/tree/main/',
-          // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
           onUntruncatedBlogPosts: 'warn',
