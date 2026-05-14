@@ -1,0 +1,10 @@
+{
+  "label": "Code Standarts",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "slug": "/CodeStandarts",
+
+    "description": "Here you will find all the information about code standarts, how we name variables, projects and any other kind of patern adopted by the team to make our code more organized and easier to understand. "
+  }
+}

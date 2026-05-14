@@ -1,15 +1,14 @@
-import type {ReactNode} from 'react';
+import type { ReactNode } from 'react';
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
-import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import Heading from '@theme/Heading';
 
 import styles from './index.module.css';
 
 function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
+  const { siteConfig } = useDocusaurusContext();
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
@@ -18,11 +17,6 @@ function HomepageHeader() {
         </Heading>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
         <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/intro">
-            Docusaurus Tutorial - 5min ⏱️
-          </Link>
         </div>
       </div>
     </header>
@@ -30,14 +24,173 @@ function HomepageHeader() {
 }
 
 export default function Home(): ReactNode {
-  const {siteConfig} = useDocusaurusContext();
+  const { siteConfig } = useDocusaurusContext();
   return (
     <Layout
       title={`Hello from ${siteConfig.title}`}
       description="Description will go into a meta tag in <head />">
       <HomepageHeader />
-      <main>
-        <HomepageFeatures />
+      <main style={{
+        display: 'flex',
+        justifyContent: 'center',
+        gap: '4rem',
+        padding: '4rem',
+        flexWrap: 'wrap',
+        backgroundColor: '#111827',
+        minHeight: '50vh'
+      }}
+      >
+
+        {/* ////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
+
+        <Link
+          to="/docs/Introduction/"
+          style={{
+            background: '#423f43',
+            padding: '2rem',
+            borderRadius: '20px',
+            width: '400px',
+            textDecoration: 'none',
+            color: 'white',
+            textAlign: 'center',
+            transition: '0.3s',
+          }}
+
+        >
+          <h1 style={{ fontSize: '3rem' }}>📘</h1>
+
+          <h2>Introduction</h2>
+
+          <p>
+            Understanding the basics of FRC java project development.
+          </p>
+        </Link>
+
+        {/* ////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
+
+        <Link
+          to="/docs/CodeStandarts/"
+          style={{
+            background: '#423f43',
+            padding: '2rem',
+            borderRadius: '20px',
+            width: '400px',
+            textDecoration: 'none',
+            color: 'white',
+            textAlign: 'center',
+            transition: '0.3s',
+          }}
+
+        >
+          <h1 style={{ fontSize: '3rem' }}>📏</h1>
+
+          <h2>Code standards</h2>
+
+          <p>
+            Following best practices for writing maintainable and efficient code.
+          </p>
+        </Link>
+
+        {/* ////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
+
+        <Link
+          to="/docs/CodeStructure"
+          style={{
+            background: '#423f43',
+            padding: '2rem',
+            borderRadius: '20px',
+            width: '400px',
+            textDecoration: 'none',
+            color: 'white',
+            textAlign: 'center',
+            transition: '0.3s',
+          }}
+
+        >
+          <h1 style={{ fontSize: '3rem' }}>🏗️</h1>
+
+          <h2>Code structure</h2>
+
+          <p>
+            Looking for how we structure our code and how to master it.
+          </p>
+        </Link>
+
+        {/* ////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
+
+        <Link
+          to="/docs/ControlTechniques"
+          style={{
+            background: '#423f43',
+            padding: '2rem',
+            borderRadius: '20px',
+            width: '400px',
+            textDecoration: 'none',
+            color: 'white',
+            textAlign: 'center',
+            transition: '0.3s',
+          }}
+
+        >
+          <h1 style={{ fontSize: '3rem' }}>🎮</h1>
+
+          <h2>Control techniques</h2>
+
+          <p>
+            Making your robot interacts as it should with the real world.
+          </p>
+        </Link>
+
+        {/* ////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
+
+        <Link
+          to="/docs/CodeDeveloping"
+          style={{
+            background: '#423f43',
+            padding: '2rem',
+            borderRadius: '20px',
+            width: '400px',
+            textDecoration: 'none',
+            color: 'white',
+            textAlign: 'center',
+            transition: '0.3s',
+          }}
+
+        >
+          <h1 style={{ fontSize: '3rem' }}>💻</h1>
+
+          <h2>Code developing</h2>
+
+          <p>
+            Creating and implementing new code concepts.
+          </p>
+        </Link>
+
+        {/* ////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
+
+        <Link
+          to="/docs/TestingANDImproving"
+          style={{
+            background: '#423f43',
+            padding: '2rem',
+            borderRadius: '20px',
+            width: '400px',
+            textDecoration: 'none',
+            color: 'white',
+            textAlign: 'center',
+            transition: '0.3s',
+          }}
+
+        >
+          <h1 style={{ fontSize: '3rem' }}>🧪</h1>
+
+          <h2>Testing and improving</h2>
+
+          <p>
+            Performing good tests and interpreting the results to get better.
+          </p>
+        </Link>
+
       </main>
     </Layout>
   );
