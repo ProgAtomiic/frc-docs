@@ -1,0 +1,56 @@
+---
+id: Criação
+title: Criação
+sidebar_label: Criação
+---
+
+# CRIAÇÃO:
+
+# CRIAÇÃO DO CÓDIGO:
+
+:::note
+Este documento foi feito visando padronizar a forma com que criamos o código em passos simples.
+:::
+
+### CRIAÇÃO DO REPOSITÓRIO:
+
+
+* Criar o repositório no local correto da organização, a partir do fork do repositório base ‘Basiic’ seguindo a convenção de nomes definida.
+
+* Adicionar um README inicial com informações essenciais para a programação: Convenção de nomes para commits, variáveis e classes; Boas práticas que devem ser seguidas; Explicação resumida da estrutura do código usada.
+
+* Configurar a criação de branches para cada feature do código, utilizando nomes descritivos (ex: feat-intake, feature-drivetrain).
+
+* Criar a branch somente quando for realmente utilizá-la, para evitar merges desnecessárias.
+
+---
+
+### DIAGRAMA DE ESTADOS:
+
+Consiste em entender cada estado que seu robô estará em cada momento. Com essa ferramenta é possível entender o funcionamento geral do seu robô, bem como os: states, subsystem states, métodos e hardware necessário.
+
+#### <u>DEFINIÇÕES PRÉVIAS:</u>
+
+* ***STATE*** - É o estado em que o robô pode ou não estar. Todas as possibilidades devem ser definidas, e não pode acontecer 2 estados simultâneos.
+
+* ***SUBSYSTEM STATES*** - É o conjunto de comandos que executam os subsistemas.
+
+* ***SUBSYSTEMS*** - É onde o mecanismo é criado no código, suas ações e valores que são retornados.
+
+* ***TRIGGERS*** - É onde dizemos quando um estado pode acontecer, atrelando ele a uma condição.
+
+* ***DEFAULT STATE*** - executado quando nenhum outro estado está acontecendo.
+
+SUGESTÃO: Utilização do site [drawio](https://app.diagrams.net/) para fazer o diagrama.
+
+---
+
+ → Funciona como uma cascata, definindo o funcionamento mais gerais primeiro:
+
+1. Definir um **default state** e quais os **subsystem states** que estarão ali dentro;
+
+2. Criar outro **state** necessário para o funcionamento robô e os subsystem states envolvidos ali;
+
+3. Definir as transições (condições de mudança) entre o estado atual e o **default state**, é importante avaliar a transição de ida, ou seja, como chegar naquele estado. Mas também a transição de volta, como voltar ao **default state**;
+
+*\*AGORA REPITA OS PASSOS ATÉ DEFINIR TODOS SEUS STATES\**

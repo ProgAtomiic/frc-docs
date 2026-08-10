@@ -1,8 +1,54 @@
 ---
-id: CodeStandarts_1
-title: Code standarts 1
-sidebar_label: Code standarts 1
+id: Organização
+title: Organização
+sidebar_label: Organização
 ---
 
-# Code standarts 1
+# ORGANIZAÇÃO:
+
+:::note
+Este documento foi feito visando padronizar a forma com que organizamos o código.
+:::
+
+### DIFERENÇA ENTRE SUBSYSTEMS, COMMANDS E METHODS:
+
+| Conceito | Descrição |
+| :--- | :--- |
+| **Subsystems** | É a parte de hardware do robô, onde vão ser declarados motores, sensores, etc. Devem ser divididos de acordo com os mecanismos/funções do robô (Ex: Elevador, garra, visão). |
+| **Commands** | É como o robô vai se comportar usando os subsistemas. Cada comando pode usar mais de um subsistema. Devem ser divididos de acordo com as ações do subsistemas (Ex: ball intake, coral score position, coral score). |
+| **Methods** | São usados dentro dos comandos ou subsistemas para evitar repetições. São funções simples (Ex: ligar motor do elevador, desligar motor do elevador, PID base). |
+
+---
+
+### BIBLIOTECAS:
+
+:::note
+**Observação:** As bibliotecas destacadas em vermelho são as que estão em uso; as demais foram incluídas para atender a um requisito da biblioteca YAGSL.
+:::
+
+* **<mark style={{backgroundColor: '#e63946', color: '#ffffff'}}>WPILibNewCommands:</mark>** Versão alternativa do sistema de comandos WPILib.
+* **<mark style={{backgroundColor: '#e63946', color: '#ffffff'}}>Photonlib:</mark>** Visão computacional com AprilTags (PhotonVision).
+* **<mark style={{backgroundColor: '#e63946', color: '#ffffff'}}>Yagsl:</mark>** Framework modular para swerve drive.
+* **<mark style={{backgroundColor: '#e63946', color: '#ffffff'}}>PathPlannerLib:</mark>** Criação e execução de trajetórias com editor gráfico (para fazer trajetos tipo autônomo).
+* **<mark style={{backgroundColor: '#e63946', color: '#ffffff'}}>Phoenix6:</mark>** Suporte moderno para Talon FX/Falcon 500 (CTRE).
+* **<mark style={{backgroundColor: '#e63946', color: '#ffffff'}}>REVLib:</mark>** Motores Spark MAX/NEO e dispositivos REV.
+* **<mark style={{backgroundColor: '#e63946', color: '#ffffff'}}>AdvantageKit:</mark>** Logging avançado com visualização no AdvantageScope.
+* **ReduxLib:** Utilitários e abstrações para comandos e subsistemas.
+* **ChoreoLib:** Planejamento de trajetórias cinemáticas.
+* **DogLog:** Logging leve e rápido para FRC.
+* **LumynLabs:** Controle de LEDs e ferramentas visuais.
+* **Studica:** Suporte a hardware da plataforma Studica.
+* **ThriftyLib:** Ferramentas para braços e mecanismos Thrifty.
+* **URCL:** Biblioteca de controle unificado de robôs.
+* **Libgrapplefrc2025:** Controle de mecanismos como garras ou braços.
+* **<mark style={{backgroundColor: '#e63946', color: '#ffffff'}}>Maple-sim</mark>:** Simulador de motores e sensores.
+* **Playingwithfusion2025:** Suporte a sensores da Playing With Fusion.
+* **Phoenix5:** Suporte legado para Talon SRX/Victor SPX (CTRE).
+
+---
+
+### EXTENSÕES:
+
+* **Live Share:** Programação colaborativa em tempo real no VS Code.
+
 

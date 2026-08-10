@@ -4,23 +4,51 @@ title: Nomeclatura
 sidebar_label: Nomeclatura
 ---
 
-# Nomeclatura
-
-OBJETIVO:  
+# NOMECLATURA:
+:::note
 Este documento foi feito visando padronizar o nome de variáveis, constantes, métodos e arquivos  do código.
+:::
 
-NOME DE CÓDIGO:
-ROBÔ_ANO_TEMPORADA_TORNEIO.
-VARIÁVEIS:
-Ex: Motor esquerdo → leftMotor
-Ex2: Velocidade motor esquerdo → leftMotorSpeed
-Ex3: Colocar motor esquerdo numa posição → setLeftMotorPosition
-Ex4: Pegar posição do motor esquerdo → getLeftMotorPosition
-CONSTANTES:
-Ex: Id do motor esquerdo → kLeftMotorID
+### NOME DE CÓDIGO:
 
-Além da formatação, é importante usar nomenclaturas que representam sua função de forma direta, fazendo com que a compreensão do código seja mais rápida.
+* `ROBÔ_ANO_TEMPORADA_TORNEIO`
 
-EVITE NÚMEROS ALEATÓRIOS (MAGIC-NUMBERS)  DENTRO DO CÓDIGO, NOMEIE VARIÁVEIS COM O VALOR, AO INVÉS DISSO:
+---
+
+### VARIÁVEIS:
+
+* **Ex:** Motor esquerdo → `leftMotor`
+* **Ex2:** Velocidade motor esquerdo → `leftMotorSpeed`
+* **Ex3:** Colocar motor esquerdo numa posição → `setLeftMotorPosition`
+* **Ex4:** Pegar posição do motor esquerdo → `getLeftMotorPosition`
 
 
+### CONSTANTES:
+
+* **Ex:** Id do motor esquerdo → `kLeftMotorID`
+
+---
+
+Além da formatação, é importante usar nomeclaturas que representam sua função de forma direta, fazendo com que a compreensão do código seja mais rápida.
+
+**EVITE NÚMEROS ALEATÓRIOS (MAGIC-NUMBERS) DENTRO DO CÓDIGO, NOMEIE VARIÁVEIS COM O VALOR, AO INVÉS DISSO:**
+
+import CodeBlock from '@theme/CodeBlock';
+
+<CodeBlock language="java" title="SwerveKinematics.java">
+{`public static SwerveDriveKinematics SwerveKinematics = new SwerveDriveKinematics(
+    new Translation2d(Units.inchesToMeters(10.8751969), Units.inchesToMeters(10.8751969)),
+    new Translation2d(Units.inchesToMeters(10.8751969), Units.inchesToMeters(-10.8751969)),
+    new Translation2d(Units.inchesToMeters(-10.8751969), Units.inchesToMeters(10.8751969)),
+    new Translation2d(Units.inchesToMeters(-10.8751969), Units.inchesToMeters(-10.8751969)));`}
+</CodeBlock>
+
+---
+
+### PASTAS:
+
+* **Ex:** Subsystems -> subsystems.
+
+* **Ex2:** Subsistema do intake -> IntakeSubsystem.
+
+[REFERÊNCIA UTILIZADA PARA CRIAÇÃO](https://github.com/team254)

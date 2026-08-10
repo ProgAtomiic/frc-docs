@@ -1,0 +1,49 @@
+---
+id: Uso do github
+title: Uso do github
+sidebar_label: Uso do github
+---
+
+# USO DO GITHUB:
+
+:::note
+Este documento foi feito visando padronizar a forma com que usamos o GitHub, e os nomes que damos a repositórios, branchs e commits.
+:::
+
+### REPOSITÓRIO:
+
+O repositório contém o código que estamos trabalhando atualmente.
+
+* **Nomenclatura:** `ROBÔ_ANO_TEMPORADA_TORNEIO`.  
+  *\*Em robôs simulados com o objetivo de desenvolvimento e aprendizado, o torneio pode ser trocado por "CODATOM".*
+
+---
+
+### BRANCHES:
+
+As branches servem para dividir e salvar tarefas maiores que estamos fazendo no código, elas são essenciais para manter a organização e permitir o trabalho simultâneo. Quando concluímos o trabalho, podemos dar "merge", que une duas branches de maneira automática.
+
+* **Main:** Contém o código mais atualizado que teve o funcionamento testado e aprovado no robô, ou em alguns casos, no robô simulado (Apenas no CODATOM). Não é permitido fazer commits em cima da Main, todas as alterações devem ser feitas fora dela.
+
+* **Feat:** Quando criamos uma branch com o objetivo de adicionar ou criar um novo recurso, seu nome fica: `feat-new_feature`.
+
+* **Fix:** Quando estamos solucionando um problema que ocasionalmente aconteceu durante o desenvolvimento do código, seu nome fica: `fix-problem_name`.
+
+* **Chore:** Quando temos que realizar uma ação que visa atualizar, simplificar ou limpar o código, seu nome fica: `chore-action_name`.
+
+---
+
+### COMMITS:
+
+Os commits servem para publicar as pequenas alterações que fizemos no código. Sempre que realizamos uma mudança mínima, devemos realizar o commit, a fim de evitar com que a alteração fique grande demais e cause problemas.
+
+* **Feat:** Quando estamos adicionando ou criando um novo recurso, seu nome fica: `"feat: new feature"`.
+
+* **Fix:** Quando estamos solucionando um problema que ocasionalmente aconteceu durante o desenvolvimento do código, seu nome fica: `"fix: problem name"`.  
+  É ideal que no comentário do commit tenha características e a solução do problema.
+
+* **Chore:** Quando temos que realizar uma ação que visa atualizar, simplificar ou limpar o código, seu nome fica: `"chore: action name"`.
+
+:::warning 
+Tanto nos commits quanto nas branches os nomes e descrições devem ser em inglês
+:::

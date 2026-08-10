@@ -84,10 +84,10 @@ export default function Home(): ReactNode {
         >
           <h1 style={{ fontSize: '3rem' }}>📏</h1>
 
-          <h2>Code standards</h2>
+          <h2>Padrões de código</h2>
 
           <p>
-            Following best practices for writing maintainable and efficient code.
+            Seguindo as melhores práticas para escrever um código eficiente e de fácil manutenção.
           </p>
         </Link>
 
