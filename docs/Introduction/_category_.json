@@ -1,0 +1,9 @@
+{
+  "label": "INTRODUÇÃO",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "slug": "/Introduction",
+
+    "description": "Este documento foi feito visando orientar os primeiros passos na programação da equipe, centralizando conceitos fundamentais, ferramentas de desenvolvimento e a arquitetura padrão adotada em nossos robôs." 
+}}

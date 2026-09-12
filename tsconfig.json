@@ -4,7 +4,7 @@
 {
   "extends": "@docusaurus/tsconfig",
   "compilerOptions": {
-    "baseUrl": ".",
+    "baseUrl": "./",
     "ignoreDeprecations": "",
     "strict": true
   },

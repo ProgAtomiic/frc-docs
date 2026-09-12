@@ -1,0 +1,98 @@
+---
+id: Introdução ao java
+title: Introdução ao java
+sidebar_label: Introdução ao java 
+sidebar_position : 1
+---
+
+
+
+# INTRODUÇÃO AO JAVA:
+
+:::note
+Este documento foi feito visando introduzir a linguagem Java para a programação do robô.
+:::
+
+### VARIÁVEIS E TIPOS DE DADOS:
+
+Podemos armazenar dados de vários tipos no Java. Os principais são:
+
+* **int** → Números inteiros. Ex: `int teamNumber = 9110;`
+* **double** → Números decimais. Ex: `double speed = 4.2;`
+* **boolean** → Verdadeiro ou falso. Ex: `boolean on = true;`
+* **String** → Texto. Ex: `String teamName = "Atomiic";`
+
+---
+
+### ESTRUTURAS DE DECISÃO:
+
+Estruturas condicionais mudam o comportamento do robô em tempo real com base em sensores ou comandos dos pilotos.
+
+* **if (Se):** Executa uma ação apenas se a condição for verdadeira.
+* **else (Senão):** Define o comportamento reserva caso a condição do if seja falsa.
+* **else if (Senão Se):** Cria uma lista de testes em sequência quando há mais de duas opções.
+
+import CodeBlock from '@theme/CodeBlock';
+
+<CodeBlock language="java" title="ExemploDecisao.java">
+{`if (controle.getRightBumper()) {
+    motorIntake.set(0.8);
+} else if (controle.getLeftBumper()) {
+    motorIntake.set(-0.5);
+} else {
+    motorIntake.set(0.0);
+}`}
+</CodeBlock>
+
+---
+
+### ESTRUTURAS DE REPETIÇÃO:
+
+Laços de repetição servem para executar um bloco de código várias vezes seguidas. Na FRC, eles exigem cuidado extremo para não travar o robô.
+
+* **for (Para):** Repetir um bloco por um número fixo e conhecido de vezes utilizando um contador.
+
+<CodeBlock language="java" title="ExemploFor.java">
+{`for (int porta = 0; porta < 4; porta++) {
+    SmartDashboard.putNumber("Motor " + porta, motores[porta].getEncoder().getPosition());
+}`}
+</CodeBlock>
+
+* **while (Enquanto):** Repete o código enquanto uma condição específica continuar sendo verdadeira.
+
+:::warning 
+Na FRC, nunca usamos o **while** no código, pois ele causa travamentos que impedem o funcionamento adequado do robô.
+:::
+
+---
+
+### CLASSES, MÉTODOS E OBJETOS:
+
+O Java FRC usa a Programação Orientada a Objetos para traduzir os componentes físicos do robô em linhas de código.
+
+* **Classe:** É a planta baixa, o molde ou o projeto teórico de um componente.
+* **Método:** São as ações, funções ou comportamentos que o objeto pode executar.
+
+<CodeBlock language="java" title="Elevador.java">
+{`public class Elevador {
+    private double velocidadeAtual = 0.0;
+
+    public void mover(double velocidade) {
+        velocidadeAtual = velocidade;
+    }
+
+    public void parar() {
+        velocidadeAtual = 0.0;
+    }
+}`}
+</CodeBlock>
+
+* **Objeto:** É a instância real e física criada a partir do molde da classe. É o componente que existe de verdade no robô.
+
+<CodeBlock language="java" title="UsoObjeto.java">
+{`Elevador elevadorPrincipal = new Elevador();
+elevadorPrincipal.mover(0.5);
+elevadorPrincipal.parar();`}
+</CodeBlock>
+
+

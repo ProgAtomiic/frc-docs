@@ -1,0 +1,161 @@
+---
+id: Introdução ao command based
+title: Introdução ao command based
+sidebar_label: Introdução ao command based
+sidebar_position : 3
+---
+# INTRODUÇÃO AO COMMAND-BASED:
+
+:::note
+Este documento foi feito visando introduzir o sistema Command-Based utilizado na programação de robôs FRC através do WPILib, apresentando os principais conceitos necessários para organizar o código do robô.
+:::
+
+### SUBSYSTEMS:
+
+Os Subsystems representam os mecanismos físicos do robô. Cada subsystem deve ser responsável pelo controle de uma parte específica do robô.
+
+* **Drivetrain** → Responsável pela movimentação do robô.
+* **Intake** → Responsável por coletar ou retirar peças.
+* **Elevator** → Responsável por movimentar um mecanismo verticalmente.
+* **Arm** → Responsável pelo movimento de um braço.
+
+Um subsystem normalmente contém os motores, sensores e métodos necessários para controlar aquele mecanismo.
+
+import CodeBlock from '@theme/CodeBlock';
+
+<CodeBlock language="java" title="Intake.java">
+{`public class Intake extends SubsystemBase {
+
+    private final MotorController motor = new MotorController();
+
+    public void coletar() {
+        motor.set(0.8);
+    }
+
+    public void parar() {
+        motor.set(0.0);
+    }
+}`}
+</CodeBlock>
+
+---
+
+### COMMANDS:
+
+Os Commands representam ações que o robô deve executar. Eles utilizam os Subsystems para controlar os mecanismos.
+
+Um comando possui um ciclo de execução, permitindo definir o que deve acontecer quando ele começa, enquanto está sendo executado e quando termina:
+
+* **initialize():** Executado uma vez quando o comando começa.
+* **execute():** Executado repetidamente enquanto o comando estiver ativo.
+* **end():** Executado quando o comando termina.
+* **isFinished():** Determina quando o comando deve terminar.
+
+<CodeBlock language="java" title="Coletar.java">
+{`public class Coletar extends Command {
+
+    private final Intake intake;
+
+    public Coletar(Intake intake) {
+        this.intake = intake;
+        addRequirements(intake);
+    }
+
+    @Override
+    public void execute() {
+        intake.coletar();
+    }
+
+    @Override
+    public void end(boolean interrupted) {
+        intake.parar();
+    }
+}`}
+</CodeBlock>
+
+---
+
+### TRIGGERS:
+
+Os Triggers são responsáveis por detectar eventos e iniciar Commands. Eles são muito utilizados para conectar os controles dos pilotos às ações do robô.
+
+* **whileTrue():** Mantém o comando ativo enquanto o botão estiver pressionado.
+* **onTrue():** Executa o comando quando o botão é pressionado.
+* **onFalse():** Executa o comando quando o botão é solto.
+
+<CodeBlock language="java" title="TriggerExemplo.java">
+{`controle.a().whileTrue(new Coletar(intake));`}
+</CodeBlock>
+
+> Nesse exemplo, enquanto o botão A estiver pressionado, o comando `Coletar` será executado.
+
+---
+
+### DEFAULT COMMANDS:
+
+Um Default Command é o comando executado por um Subsystem quando nenhum outro comando está utilizando aquele mecanismo.
+
+Isso é muito utilizado no Drivetrain, por exemplo, para manter o robô sendo controlado pelos joysticks durante o período normal de operação.
+
+<CodeBlock language="java" title="DefaultCommandExemplo.java">
+{`drivetrain.setDefaultCommand(
+    new TeleopDrive(
+        drivetrain,
+        () -> controle.getLeftY(),
+        () -> controle.getRightX()
+    )
+);`}
+</CodeBlock>
+
+> Enquanto nenhum outro comando estiver controlando o drivetrain, o `TeleopDrive` continuará sendo executado.
+
+---
+
+### REQUIREMENTS:
+
+Os Requirements indicam quais Subsystems um Command precisa utilizar. Eles impedem que dois Commands tentem controlar o mesmo mecanismo ao mesmo tempo.
+
+<CodeBlock language="java" title="RequirementsExemplo.java">
+{`public Coletar(Intake intake) {
+    this.intake = intake;
+    addRequirements(intake);
+}`}
+</CodeBlock>
+
+> Nesse caso, o comando `Coletar` exige o `Intake`. Se outro comando tentar utilizar o mesmo subsystem, o Command Scheduler irá gerenciar o conflito.
+
+---
+
+### COMMAND SCHEDULER:
+
+O Command Scheduler é responsável por gerenciar os Commands durante o funcionamento do robô. Ele atua como o gerenciador de tarefas do robô:
+
+* Inicia Commands.
+* Executa Commands.
+* Finaliza Commands.
+* Verifica Requirements.
+* Gerencia conflitos entre Commands.
+* Executa os Default Commands dos Subsystems.
+
+---
+
+### COMMAND GROUPS:
+
+Podemos combinar vários Commands para criar ações mais complexas. Os principais tipos são:
+
+* **SequentialCommandGroup:** Executa os Commands um após o outro.
+* **ParallelCommandGroup:** Executa vários Commands simultaneamente.
+* **ParallelRaceGroup:** Executa vários Commands e termina quando o primeiro terminar.
+* **ParallelDeadlineGroup:** Executa vários Commands, mas utiliza um Command principal para determinar quando o grupo termina.
+
+<CodeBlock language="java" title="CommandGroupExemplo.java">
+{`new SequentialCommandGroup(
+    new AbrirIntake(intake),
+    new Coletar(intake),
+    new PararIntake(intake)
+);`}
+</CodeBlock>
+
+* **Ordem de execução:** `Abrir Intake` → `Coletar` → `Parar Intake`
+
+
